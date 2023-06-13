@@ -14,10 +14,15 @@
        <a href="/userProfile">Profile</a> 
     <a href="/main">Main</a>
 <a href="/private">Private</a>
-       
+       {{#if loggedIn}}
+          <li><a href="/profile">Profile</a></li>
+          <li><a href="/private">Private</a></li>
+          <li><form action="/logout" method="post"><button type="submit">Log out</button></form></li>
+        {{else}}
            <li id="signup">
           <a href="/signup">Signup</a>
           <a href="/login">Login</a>
+          {{/if}}
             <form id="logout-form" action="/logout" method="POST">
 
 

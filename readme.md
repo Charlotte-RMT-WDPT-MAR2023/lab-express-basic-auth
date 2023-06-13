@@ -79,7 +79,7 @@ Let's create two different routes protected by authentication:
 - `/private` - Add your favorite `gif` and an `<h1>` denoting the page as private.
 
 Create the views and the custom authentication middleware function. Once created, use the middleware and protect the routes to prevent access to users who are not being authenticated.
-
+/
 <br><br>
 
 ## Bonus | The validation

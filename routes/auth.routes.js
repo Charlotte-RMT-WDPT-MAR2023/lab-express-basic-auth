@@ -134,6 +134,20 @@ router.get("/userProfile", isLoggedIn, (req, res) => {
   res.render("users/user-profile", { userInSession: req.session.currentUser });
 });
 
+// get main page
+router.get("/main", (req, res, next) => {
+  if (req.session.currentUser){
+    res.render("main",  { loggedIn: true });
+  } else {
+    res.render("main",  { loggedIn: false });
+  }
+});
+
+// get private page
+router.get("/private", isLoggedIn, (req, res, next) => {
+  res.render("private", { loggedIn: true });
+});
+
 //                     .: ADDED :.
 router.post("/logout", isLoggedIn, (req, res) => {
   req.session.destroy();

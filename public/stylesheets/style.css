@@ -66,15 +66,17 @@ form button:hover {
 ul {
   border-bottom: 2px solid #43a3e6;
   height: 30px;
-  padding: 1em 0;
+  padding: 3em 0;
   list-style-type: none;
+  display: flex;
+  justify-content: space-between;
 }
 
 ul li {
   line-height: 20px;
 }
 
-#to-right {
+#right {
   padding: 1em;
   float: right;
 }
